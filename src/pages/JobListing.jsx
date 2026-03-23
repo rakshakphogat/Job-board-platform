@@ -14,6 +14,7 @@ import {
 import useFetch from "@/hooks/useFetch";
 import { useUser } from "@clerk/clerk-react";
 import { State } from "country-state-city";
+import { Trash } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
 
@@ -116,12 +117,8 @@ const JobListing = () => {
           </SelectContent>
         </Select>
 
-        <Button
-          onClick={clearFilter}
-          variant="destructive"
-          className="sm:w-1/2"
-        >
-          Clear Filters
+        <Button onClick={clearFilter} variant="destructive">
+          <Trash size={12} />
         </Button>
       </div>
 
